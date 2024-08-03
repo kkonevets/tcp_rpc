@@ -24,7 +24,7 @@ def server_program():
         unpacker.feed(buf)
         for obj in unpacker:
             print("from connected user: " + str(obj))
-            conn.send(msgpack.packb("Hi from server!"))  # send data to the client
+            conn.send(msgpack.packb(list(range(100))))  # send data to the client
 
     conn.close()  # close the connection
 
