@@ -1,7 +1,7 @@
 # tcp_rpc
- A simple tcp client/server app using msgpack. Client is in C and server is in Python.
+A simple RPC client over TCP using msgpack. Client is in C. And server is in Python for testing purpose.
 
- Client can accept incomplete messages and waits till more data comes, so you can send big structured messages. This is possible by a streaming feature of msgpack.
+Client sends a message and blocks till server sends a complete response message. Client can handle messages of arbitrary size, it uses a streaming feature of msgpack.
 
 Install msgpack
 ```bash
